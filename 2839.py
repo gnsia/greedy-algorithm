@@ -22,7 +22,7 @@ for i in range(1,n+1):
     if i % b == 0 :
         today_b.append(i)
 
-print(range(1,n+1))
+# print(range(1,n+1))
 
 last_b = today_b[-1]
 # print(last_b)
