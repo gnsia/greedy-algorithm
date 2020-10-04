@@ -10,33 +10,86 @@
 #
 # 출력
 # 상근이가 배달하는 봉지의 최소 개수를 출력한다. 만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.
-a = 3
-b = 5
-today_a = []
-today_b = []
-# n = int(input())
-# print(n)
 
-n = 11
-for i in range(1,n+1):
-    if i % b == 0 :
-        today_b.append(i)
 
-# print(range(1,n+1))
 
-last_b = today_b[-1]
-# print(last_b)
+# a = [] # 3kg 봉다리
+# b = [] # 5kg 봉다리
+# result = []
+# result_a = [] # a 봉다리 갯수
+# result_b = [] # b 봉다리 갯수
 
-find_a = n - last_b
-# print(find_a)
-for i in range(1, find_a+1):
-    if i % a == 0 :
-        # print(i)
-        today_a.append(i)
+sugar_kg = int(input())
+pbag = 0
+while (1):
+    if sugar_kg % 5 == 0:
+        pbag = pbag + (sugar_kg / 5)
+        print(int(pbag))
+        break
 
-print(today_a)
-print(today_b)
-today_ab = today_a + today_b
-today = len(today_ab)
+    sugar_kg = sugar_kg - 3
+    pbag = pbag + 1
 
-print(today)
+    if sugar_kg < 0 :
+        print(-1)
+        break
+
+
+
+# if n % 5 == 0 :
+#     result.append(int(n/5))
+# elif n % 5 != 0 :
+#     for i in range(1, n+1):
+#         if i % 5 == 0 :
+#             b.append(i)
+#     result.append(len(b))
+#     for i in range(1, n + 1 - b[-1]):
+#         if i
+# print(b[-1])
+# print(result)
+
+
+# for i in range(1,n+1):
+#     if i % 3 == 0 :
+#         a.append(i)
+#
+# for i in range(1,n+1):
+#     if i % 5 == 0 :
+#         b.append(i)
+# print(a)
+# print(b)
+#
+# for i in a:
+#     for j in b:
+#         if i + j == n:
+#             result.append(i)
+#             result.append(j)
+# print("result :",result)
+#
+# for i in result:
+#     if i % 3 == 0 :
+#         result_a.append(int(i / 3))
+#     elif i % 5 == 0 :
+#         result_b.append(int(i / 5))
+# print(result_a)
+# print(result_b)
+#
+# answer = result_a[0] + result_b[0]
+# print(answer)
+#
+# last_b = today_b[-1]
+# # print(last_b)
+#
+# find_a = n - last_b
+# # print(find_a)
+# for i in range(1, find_a+1):
+#     if i % a == 0 :
+#         # print(i)
+#         today_a.append(i)
+#
+# # print(today_a)
+# # print(today_b)
+# today_ab = today_a + today_b
+# today = len(today_ab)
+#
+# # print(today)
